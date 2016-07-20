@@ -1,0 +1,101 @@
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+html, body
+  height: 100%
+
+body
+  font-family: 'Montserrat', sans-serif
+  background-color: #eee
+  display: flex
+  justify-content: center
+  align-items: center
+
+.wrapper
+  width: 360px
+  height: 640px
+  background-color: #fff
+  position: relative
+  overflow: hidden
+
+.menu_trigger
+  width: 40px
+  height: 40px
+  margin: 6px
+  position: absolute
+  z-index: 1
+  border: none
+  background: none
+  &:focus
+    outline: 0
+  span
+    display: block
+    position: relative
+    width: 100%
+    height: 4px
+    background-color: #333
+    &:before, &:after
+      content: ""
+      position: absolute
+      width: 100%
+      height: 100%
+      background-color: #333
+      left: 0
+    &:before
+      top: -10px
+    &:after
+      top: 10px
+
+.menu_background
+  position: absolute
+  width: 100%
+  height: 100%
+  background-color: #333
+  padding: 80px 16px 0
+
+  .logo
+    text-align: left
+    img
+      width: 180px
+
+.menu_items
+  padding-top: 16px
+  a
+    display: block
+    color: #f9f9f9
+    margin: 12px 0
+    font-weight: normal
+    font-size: 24px
+    text-decoration: none
+
+.app_content
+  position: absolute
+  width: 100%
+  height: 100%
+  overflow-x: hidden
+  overflow-y: scroll
+  background-color: #fff
+  padding: 45% 16px 0
+  transition: transform 0.5s cubic-bezier(0.99,-0.51, 0.06, 1.95)
+
+  .logo
+    margin-bottom: 32px
+    img
+      width: 220px
+
+  &.shifted
+    transform: scale(0.7) translateX(280px)
+
+.logo, .title, .slogan
+  display: block
+  text-align: center
+
+.title, .slogan
+  color: #212121
+  line-height: 1.2
+
+.title
+  margin-bottom: 8px
+  font-weight: bold
